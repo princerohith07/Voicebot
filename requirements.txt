@@ -1,0 +1,9 @@
+streamlit
+gtts
+
+pip install -U openai-whisper
+
+
+
+sudo apt install portaudio19-dev
+python3 -m pip install PyAudio
