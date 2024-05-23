@@ -64,7 +64,7 @@ def transcribe_audio(filename):
 # Function to generate response using Gemini API
 def generate_response(text):
     # Load the Gemini model
-    genai.configure(api_key="AIzaSyCoeHJ7xy6GP2HUIVJMDzw1akwy3FrtBaU")
+    genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
     gem_model = genai.GenerativeModel('gemini-pro')
     response = gem_model.generate_content(text)
     return response.text
